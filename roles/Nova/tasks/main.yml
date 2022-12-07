@@ -1,0 +1,10 @@
+- name: installing nova on ubuntu
+  apt:
+    name:
+        - nova-api
+        - nova-conductor
+        - nova-novncproxy 
+        - nova-scheduler
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"

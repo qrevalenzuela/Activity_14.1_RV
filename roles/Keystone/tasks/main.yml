@@ -1,0 +1,11 @@
+- name: installing keystone on ubuntu 
+  apt:
+    name: 
+        - keystone 
+        - apache2 
+        - libapache2-mod-php
+        - php
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"
+
